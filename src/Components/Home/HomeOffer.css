@@ -1,0 +1,16 @@
+.offerdiv,.dealdiv{
+    width: 100%;
+    margin-top: 1%;
+}
+.offerdiv:hover{
+border: 1px solid rgb(207, 200, 200);
+background-color: rgb(145, 210, 247);
+}
+.offerimg{
+    width: 100%;
+    
+}
+.dealimg{
+    width: 100%;
+}
+

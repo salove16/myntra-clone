@@ -1,7 +1,10 @@
+
+import {Home} from "./Components/Home/Home"
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to home page</h1>
+     
+      <Home></Home>
       {/* {Links} */}
       {/* {Routes} */}
 
