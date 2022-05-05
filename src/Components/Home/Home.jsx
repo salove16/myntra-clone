@@ -10,7 +10,7 @@ export const Home=()=>{
 
             <HomeOffer></HomeOffer>
             <HomeBody></HomeBody>
-            <Footer ></Footer>
+           
       
         </div>
     )
