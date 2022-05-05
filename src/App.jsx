@@ -1,3 +1,4 @@
+
 import {Navbar} from "./Components/Navbar/Navbar"
 import MenSection from "./Components/MenSection";
 
@@ -19,6 +20,7 @@ function App() {
 
         4) Payment gateway - 
       } */}
+
     </div>
   );
 }
