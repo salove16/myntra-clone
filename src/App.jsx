@@ -1,14 +1,16 @@
 
 import {Navbar} from "./Components/Navbar/Navbar"
 import MenSection from "./Components/MenSection";
-
+import {Home} from "./Components/Home/Home";
 import {Route, Routes } from "react-router-dom";
+import {Footer} from "./Components/Footer/Footer"
+
 function App() {
   return (
     <div className="App">
      <Navbar />
       <Routes>
-        <Route path="/" ></Route>
+        <Route path="/" element={<Home/>} ></Route>
         <Route path="/mens" element={<MenSection></MenSection>}></Route>
       </Routes>
       {/* {Few things which needs to be discussed before starting off with the project
@@ -19,8 +21,8 @@ function App() {
 
 
         4) Payment gateway - 
-      } */}
-
+       */}
+<Footer ></Footer>
     </div>
   );
 }

@@ -4,7 +4,7 @@
 }
 
 hr{
-    width: 85%;
+    width: 100%;
     font-size: 1px;
     margin-bottom: 2%;
 }
@@ -25,7 +25,7 @@ hr{
    cursor: pointer;
     text-align: left;
     color: rgb(100, 100, 108);
-    line-height: 10px;
+    /* line-height: 10px; */
 }
 .Footerclassdiv2{
   width: 25%;
