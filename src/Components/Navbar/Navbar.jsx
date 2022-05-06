@@ -1,18 +1,16 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./Navbar.css";
-import Myntra_logo from "./NavImage/Myntra-logo-png-ico.png"
-import {MenNav} from "./MiniNavbar/Men"
-import {WomenNav} from "./MiniNavbar/WomenNav"
-import {KidsNav} from "./MiniNavbar/KidsNav"
-import {HomeLivingNav} from "./MiniNavbar/HomeLivingNav"
-import {BeautyNav} from "./MiniNavbar/BeautyNav"
+import Myntra_logo from "./NavImage/Myntra-logo-png-ico.png";
+import { MenNav } from "./MiniNavbar/Men";
+import { WomenNav } from "./MiniNavbar/WomenNav";
+import { KidsNav } from "./MiniNavbar/KidsNav";
+import { HomeLivingNav } from "./MiniNavbar/HomeLivingNav";
+import { BeautyNav } from "./MiniNavbar/BeautyNav";
 import { StudioNav } from "./MiniNavbar/Studio";
 
-
-
 const Div = styled.nav`
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   padding: 5px 10px;
   width: 100%;
@@ -22,7 +20,7 @@ const Div = styled.nav`
   right: 0;
   z-index: 1;
   align-items: center;
-  background-color: #FFFFFE;
+  background-color: #fffffe;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 80px 60px rgba(0, 0, 0, 0.1);
@@ -32,27 +30,19 @@ export const Navbar = () => {
   return (
     <>
       <Div>
-    
-          <Link
-        className="link1"
-          
-            to="/"
-          >
-              <img
-          style={{
-            width: "75%",
-            height: "50px",
-            marginLeft: "30%",
-            // marginRight: "30%",
-          }}
-        src={ Myntra_logo }
-          alt=""
-        />
-          </Link>
-          
-        
-      
-      
+        <Link className="link1" to="/">
+          <img
+            style={{
+              width: "75%",
+              height: "50px",
+              marginLeft: "30%",
+              // marginRight: "30%",
+            }}
+            src={Myntra_logo}
+            alt=""
+          />
+        </Link>
+
         <div className="link1">
           <Link
             className="link men"
@@ -65,10 +55,9 @@ export const Navbar = () => {
               paddingBottom: "25px",
               paddingLeft: "20px",
               paddingRight: "5px",
-            //   hoverBorderBottom:"5px solid #ee5f73"
-              
+              //   hoverBorderBottom:"5px solid #ee5f73"
             }}
-            to="/Men"
+            to="/men"
           >
             MEN
           </Link>
@@ -123,7 +112,7 @@ export const Navbar = () => {
           <Link
             className="link home"
             style={{
-            //   marginLeft: "3%",
+              //   marginLeft: "3%",
               fontWeight: "bold",
               fontSize: "14px",
               textDecoration: "none",
@@ -139,8 +128,6 @@ export const Navbar = () => {
           </Link>
           <HomeLivingNav></HomeLivingNav>
         </div>
-
-
 
         <div className="link1">
           <Link
@@ -187,12 +174,10 @@ export const Navbar = () => {
         {/* <p className="nw">NEW</p> */}
 
         <div className="inp1">
-        
           <input
             type="text"
             className="inp"
             placeholder="Search for products, brands and more"
-
           />
         </div>
 
@@ -203,7 +188,10 @@ export const Navbar = () => {
             alt=""
           />
           <br></br>
-          <span> <Link to={"/login"}>Login</Link> </span>
+          <span>
+            {" "}
+            <Link to={"/login"}>Login</Link>{" "}
+          </span>
         </p>
 
         <p style={{ marginLeft: "2%" }}>

@@ -80,57 +80,28 @@ const Products = ({ data }) => {
         <List
           sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
         >
-          {[0, 1, 2, 3].map((value) => {
-            const labelId = `checkbox-list-label-${value}`;
-
-            return (
-              <ListItem key={value} disablePadding>
-                <ListItemButton
-                  role={undefined}
-                  onClick={handleToggle(value)}
-                  dense
-                >
-                  <ListItemIcon style={{ minWidth: 0 }}>
-                    <Checkbox
-                      edge="start"
-                      checked={checked.indexOf(value) !== -1}
-                      tabIndex={-1}
-                      disableRipple
-                      inputProps={{ "aria-labelledby": labelId }}
-                    />
-                  </ListItemIcon>
-                  <ListItemText
-                    id={labelId}
-                    primary={`Line item ${value + 1}`}
-                  />
-                </ListItemButton>
-              </ListItem>
-            );
-          })}
           <Divider />
-          {[0, 1, 2, 3].map((value) => {
-            const labelId = `checkbox-list-label-${value}`;
+          <h2>Brands</h2>
+          {info.map((value) => {
+            const labelId = `checkbox-list-label-${value.brand}`;
 
             return (
-              <ListItem key={value} disablePadding>
+              <ListItem key={value.brand} disablePadding>
                 <ListItemButton
                   role={undefined}
-                  onClick={handleToggle(value)}
+                  onClick={handleToggle(value.brand)}
                   dense
                 >
                   <ListItemIcon style={{ minWidth: 0 }}>
                     <Checkbox
                       edge="start"
-                      checked={checked.indexOf(value) !== -1}
+                      checked={checked.indexOf(value.brand) !== -1}
                       tabIndex={-1}
                       disableRipple
                       inputProps={{ "aria-labelledby": labelId }}
                     />
                   </ListItemIcon>
-                  <ListItemText
-                    id={labelId}
-                    primary={`Line item ${value + 1}`}
-                  />
+                  <ListItemText id={labelId} primary={`${value.brand}`} />
                 </ListItemButton>
               </ListItem>
             );
@@ -139,33 +110,28 @@ const Products = ({ data }) => {
       </div>
       {/* Right side container */}
 
-      <div
-        style={{
-          flexGrow: "1",
-          marginLeft: 20,
-          display: "grid",
-          gridColumn: repeat(4, "1fr"),
-        }}
-      >
+      <div className="productContainer">
         {info.map((e) => {
           return (
             <Card sx={{ maxWidth: 275 }}>
               <CardMedia
                 component="img"
-                height="140"
+                // height="140"
                 image={e.link}
                 alt={e.title}
               />
-              <CardContent sx={{ paddingTop: 0, paddingBottom: 0 }}>
+              <CardContent
+                sx={{ paddingTop: 0, paddingBottom: 0, marginTop: "4px" }}
+              >
                 <Typography
                   gutterBottom
-                  variant="h6"
+                  // variant="h6"
                   component="div"
-                  sx={{ marginBottom: 0 }}
+                  sx={{ marginBottom: 0, fontWeight: "bold", fontSize: "14px" }}
                 >
                   {e.brand}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" size="small">
                   {e.title}
                 </Typography>
                 <div style={{ display: "flex" }}>
@@ -174,7 +140,7 @@ const Products = ({ data }) => {
                     color="text.primary"
                     gutterBottom
                   >
-                    {e.price}
+                    Rs. {e.price}
                   </Typography>
                   <Typography
                     sx={{
@@ -190,35 +156,55 @@ const Products = ({ data }) => {
                   </Typography>
                   <Typography
                     sx={{
-                      fontSize: 14,
-                      //   fontWeight: "bold",
+                      fontSize: 12,
+                      fontWeight: "light",
                       marginLeft: 2,
+                      color: "orange",
                     }}
                     color="text.secondary"
                     gutterBottom
                   >
-                    ({e.discount})
+                    ({e.discount}% OFF)
                   </Typography>
                 </div>
               </CardContent>
-              <CardActions sx={{ justifyContent: "space-around" }}>
+              <CardActions
+                sx={{
+                  justifyContent: "space-around",
+                }}
+              >
                 <Button
                   variant="outlined"
                   size="small"
                   sx={{
                     backgroundColor: "#ff3e6b",
                     color: "white",
-                    fontWeight: "bold",
+                    // fontWeight: "bold",
                     borderColor: "#ff3e6b",
+                    textTransform: "capitalize",
                   }}
                 >
                   <ShoppingBag
-                    sx={{ marginRight: 1, fontSize: 18 }}
+                    sx={{ fontSize: 15, margin: 0, marginRight: "4px" }}
                   ></ShoppingBag>
                   Add to cart
                 </Button>
-                <Button variant="outlined" size="small">
-                  <FavoriteIcon sx={{ marginRight: 1, fontSize: 18 }} />
+                <Button
+                  variant="outlined"
+                  size="small"
+                  sx={{
+                    textTransform: "capitalize",
+                    color: "black",
+                    borderColor: "#ff3e6b",
+                  }}
+                >
+                  <FavoriteIcon
+                    sx={{
+                      marginRight: "4px",
+                      fontSize: 15,
+                      textTransform: "capitalize",
+                    }}
+                  />
                   Wishlist
                 </Button>
               </CardActions>
