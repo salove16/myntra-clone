@@ -213,7 +213,7 @@ export const Navbar = () => {
             alt=""
           />
           <br></br>
-          <span>Wishlist</span>
+          <span><Link to={"/wishlist"}>Wishlist</Link></span>
         </p>
 
         <Link
