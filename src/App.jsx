@@ -1,6 +1,5 @@
 import { Navbar } from "./Components/Navbar/Navbar";
 import MenSection from "./Components/MenSection";
-
 import { Route, Routes } from "react-router-dom";
 import Cart from "./components/Cart";
 import Login from "./components/Login";
@@ -8,11 +7,14 @@ import Products from "./components/Products";
 import Signup from "./components/Signup";
 import { Home } from "./Components/Home/Home";
 import { Footer } from "../src/Components/Footer/Footer";
+
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
+
+
         <Route path="/" element={<Home></Home>}></Route>
         {/* <Route path="/mens" element={<MenSection></MenSection>}></Route> */}
         <Route path="/men" element={<Products data={"menTShirts"} />}></Route>
@@ -43,6 +45,7 @@ function App() {
 
         4) Payment gateway - 
       } */}
+
     </div>
   );
 }
