@@ -52,7 +52,7 @@ export const Navbar = () => {
               fontSize: "14px",
               textDecoration: "none",
               color: "#282C3F",
-              paddingBottom: "25px",
+              paddingBottom: "10px",
               paddingLeft: "20px",
               paddingRight: "5px",
               //   hoverBorderBottom:"5px solid #ee5f73"
@@ -74,7 +74,7 @@ export const Navbar = () => {
               fontSize: "14px",
               textDecoration: "none",
               color: "#282C3F",
-              paddingBottom: "25px",
+              paddingBottom: "10px",
               paddingLeft: "5px",
               paddingRight: "5px",
             }}
@@ -94,7 +94,7 @@ export const Navbar = () => {
               fontSize: "14px",
               textDecoration: "none",
               color: "#282C3F",
-              paddingBottom: "25px",
+              paddingBottom: "10px",
               paddingLeft: "5px",
               paddingRight: "5px",
               marginBottom: "-2%",
@@ -117,7 +117,7 @@ export const Navbar = () => {
               fontSize: "14px",
               textDecoration: "none",
               color: "#282C3F",
-              paddingBottom: "25px",
+              paddingBottom: "10px",
               paddingLeft: "5px",
               paddingRight: "5px",
               marginBottom: "-2%",
@@ -138,7 +138,7 @@ export const Navbar = () => {
               fontSize: "14px",
               textDecoration: "none",
               color: "#282C3F",
-              paddingBottom: "25px",
+              paddingBottom: "10px",
               paddingLeft: "5px",
               paddingRight: "5px",
               marginBottom: "-2%",
@@ -159,7 +159,7 @@ export const Navbar = () => {
               fontSize: "14px",
               textDecoration: "none",
               color: "#282C3F",
-              paddingBottom: "25px",
+              paddingBottom: "10px",
               paddingLeft: "5px",
               paddingRight: "5px",
               marginBottom: "-2%",
@@ -201,7 +201,7 @@ export const Navbar = () => {
             alt=""
           />
           <br></br>
-          <span>Wishlist</span>
+          <span><Link to={"/wishlist"}>Wishlist</Link></span>
         </p>
 
         <Link
