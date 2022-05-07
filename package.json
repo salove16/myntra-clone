@@ -16,13 +16,13 @@
     "react": "^18.0.0",
     "react-alice-carousel": "^2.6.0",
     "react-dom": "^18.0.0",
-<<<<<<< HEAD
+
     "react-redux": "^8.0.1",
-=======
+
     "dotenv": "^16.0.0",
     "firebase": "^9.7.0",
     "node-fetch": "^3.2.4",
->>>>>>> 1163edd8dff2256c0de61308b66db29cf96cd712
+
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.5"
   },

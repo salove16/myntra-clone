@@ -52,7 +52,8 @@ const MenSection = () => {
   ];
 
   return (
-    <Container style={{ display: "flex" }}>
+
+    <Container style={{ display: "flex" ,width:"100%"}}  >
       {/* Left Sidebar */}
       <div className="sidebar" style={{ flexBasis: "16rem" }}>
         <List
@@ -191,6 +192,7 @@ const MenSection = () => {
         </Card>
       </div>
     </Container>
+   
   );
 };
 
